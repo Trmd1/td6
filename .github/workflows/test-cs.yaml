@@ -5,6 +5,7 @@ on: [push]
 jobs:
   demo:
     runs-on: ubuntu-latest
+    #needs: build  # (Optional, if artifact is uploaded in a separate build workflow)
     steps:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
@@ -21,4 +22,3 @@ jobs:
 
       - name: Run phpcs (assuming standard file is in test/phpcs/Symfony)
         run: php phpcs.phar --standard=test/phpcs/Symfony src
-
