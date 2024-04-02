@@ -15,10 +15,7 @@ jobs:
       - name: Checkout Repository Code
         uses: actions/checkout@v2
 
-      - name: Download phpcs.phar
-        uses: actions/download-artifact@v2
-        with:
-          name: phpcs  # Assuming you have a previously uploaded phpcs artifact
-
-      - name: Run phpcs (assuming standard file is in test/phpcs/Symfony)
-        run: php phpcs.phar --standard=test/phpcs/Symfony src
+       - name: Check out repository code
+         uses: actions/checkout@v2
+       - run: curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
+       - run: php phpcs.phar --standard=${{ github.workspace }}/test/phpcs/Symfony src
