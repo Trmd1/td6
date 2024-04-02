@@ -1,7 +1,7 @@
 name : Qualite de code action
 on : [push]
 jobs : 
-  demo : Test
+  demo : 
     runs-on: [ubuntu-latest]
     steps: 
       name : Setup php
