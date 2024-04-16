@@ -23,4 +23,4 @@ jobs:
         php ./src/MesDates.php
 
     - name: test unitaire sur MesDates.php
-      run: php C:\Users\Théo\PHP-L2\php\vendor\bin\phpunit C:\Users\Théo\PHP-L2\php\tests\MesDatesTest.php
+      run: php C:/Users/Théo/PHP-L2/php/vendor/bin/phpunit C:/Users/Théo/PHP-L2/php/tests/MesDatesTest.php
